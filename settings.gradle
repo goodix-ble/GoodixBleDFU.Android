@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven {
+            allowInsecureProtocol true
+            ///url "http://172.16.163.48:8087/repository/public/"
+            url "https://maven.aliyun.com/repository/google"
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            allowInsecureProtocol true
+            //url "http://172.16.163.48:8087/repository/public/"
+            url "https://maven.aliyun.com/repository/google"
+        }
+    }
+}
+rootProject.name = "GRDFUDemo"
+include ':app'
+include ':libcom'
+include ':libdfu2'

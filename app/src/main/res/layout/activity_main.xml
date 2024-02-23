@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/device1Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Device:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/deviceInfoTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/scanBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps = "false"
+                        android:text="Scan" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/device1Layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Device2:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/deviceInfoTv2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/scanBtn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps = "false"
+                        android:text="Scan" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/device1Layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Device3:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/deviceInfoTv3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/scanBtn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps = "false"
+                        android:text="Scan" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="File:"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/fileInfoTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/selectFileBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps = "false"
+                    android:text="Browse" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address: 0x"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/addressEd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textVisiblePassword"
+                    android:maxLength="8"
+                    android:hint = "Write/Copy address"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/extFlashCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ext Flash" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tipTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffa"
+            android:focusable="true"
+            android:padding="5dp"
+            android:text="Progress"
+            android:textColor="@color/black"
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/upgradeProgressPB"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:progress="0" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="EasyDFU"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                    <CheckBox
+                        android:id="@+id/fastModeCb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Fast Mode for DFU V2" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/startDfuBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="startDfu()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/startDfuInCopyModeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="startDfuInCopyMode()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/startUpdateResourceBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="startUpdateResource()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/startDfuWithDfuBoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="小升大/startDfuWithDfuBoot()"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="FastDFU"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                <Button
+                    android:id="@+id/fastStartDfuBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="startDfu()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/fastStartDfuInCopyModeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="startDfuInCopyMode()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/fastStartUpdateResourceBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="startUpdateResource()"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/errorInfoTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#Faa"
+            android:padding="5dp"
+            android:text="Error Info"
+            android:textColor="@color/black"
+            android:textIsSelectable="true"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAllCaps = "false"
+            android:text="Cancel" />
+
+        <TextView
+            android:id="@+id/logEd"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="#ddd"
+            android:padding="5dp"
+            android:text="log"
+            android:textIsSelectable="true"
+            android:textSize="10sp" />
+    </LinearLayout>
+</ScrollView>
