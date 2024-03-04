@@ -1,5 +1,9 @@
 # Goodix BLE DFU SDK(Android版)集成方法
 
+[EN](README.md)   |  [中文](README_zh.md)
+
+
+
 ## 1. 简介
 Android DFU SDK 由深圳市汇顶科技股份有限公司提供，主要用于对由汇顶科技研发的低功耗蓝牙芯片进行固件程序升级，此SDK已全面开放源码，用户可以快速的集成到自己的APP项目中。
 

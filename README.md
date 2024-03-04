@@ -1,5 +1,9 @@
 # Android Integration Guide for Goodix BLE DFU SDK
 
+[EN](README.md)   |  [中文](README_zh.md)
+
+
+
 ## 1. Introduction
 Android DFU SDK is provided by Goodix Tech. Co. LTd, and is mainly used for fireware program update of BLE Chips developed by Goodix Tech. This SDK is fully open source and allow users to integrate it to their android app projects.
 
