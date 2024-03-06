@@ -107,3 +107,7 @@ Import the libcom and libdfu2 modules from the SDK source code and load them int
 ## 3. Usage Note
 1. Minimum version requirement:  Android minSDK 21。
 2. SDK is developed for Goodix BLE SoC, Not suitable for other chips
+
+## 4. Change Notes
+- Please refer to [Change Notes](../../wiki/Change-Notes)
+

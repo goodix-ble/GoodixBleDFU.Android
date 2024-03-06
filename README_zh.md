@@ -106,3 +106,8 @@ Android DFU SDK 由深圳市汇顶科技股份有限公司提供，主要用于�
 ## 3. 使用说明
 1. 源码支持的最低版本为Android minSDK 21。
 2. 此源码中的所有升级功能均需配套汇顶科技低功耗蓝牙芯片使用。
+
+
+
+## 4. Change Notes
+- 请参考 [Change Notes](../../wiki/Change-Notes)
