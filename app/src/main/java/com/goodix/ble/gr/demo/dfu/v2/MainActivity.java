@@ -339,6 +339,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showVersionName() {
-        setTitle("Goodix BLE DFU (V2.0.1)");
+        setTitle("Goodix BLE DFU (V2.0.2)");
     }
 }

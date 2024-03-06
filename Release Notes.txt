@@ -1,0 +1,6 @@
+Android_GoodixBleDFU_V2.0.1_20240110
+1. 更新DFU升级方式，支持最新的App_bootloader方式进行升级，并且兼容原方案（FastDfu, DfuBoot和SecondBoot)。
+
+
+Android_GoodixBleDFU_V2.0.2_20240305
+1. 解决在Android 14上交换MTU失败而引起的升级失败问题。

@@ -65,7 +65,7 @@ import java.util.concurrent.TimeoutException;
 public class BlockingBle {
     private final String TAG;
     public final static UUID CCCD_UUID = new UUID(0x00002902_0000_1000L, 0x8000_00805F9B34FBL);
-
+    public final static int DFU_MAX_MTU_IN_ANDROID_SIDE = 247;
     public static void setup(Context ctx) {
         if (ctx != null && appCtx == null) {
             appCtx = ctx.getApplicationContext();
@@ -1112,8 +1112,16 @@ public class BlockingBle {
 
         @Override
         public void onMtuChanged(BluetoothGatt gatt, int mtu, int status) {
-            if (logger != null)
+            if (logger != null) {
                 logger.d(TAG, "onMtuChanged() called with: gatt = [" + gatt.getDevice().getAddress() + "], mtu = [" + mtu + "], status = [" + status + "]");
+            }
+
+            if (mtu > DFU_MAX_MTU_IN_ANDROID_SIDE){
+                mtu = DFU_MAX_MTU_IN_ANDROID_SIDE;
+                if (logger != null) {
+                    logger.d(TAG, "onMtuChanged() " + "mtu is too long for DFU, reset to " + mtu + " in android side.");
+                }
+            }
 
             CtrlEvt evt = bleEvtQueuePool.poll();
             if (evt == null) {
